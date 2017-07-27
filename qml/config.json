@@ -1,0 +1,8 @@
+{
+    "title": "GettingStarted",
+    "identifier": "com.gsoft.tutorial.GettingStarted",
+    "orientation": "landscape",
+    "versioncode": 1,
+    "versionname": "1.0",
+    "stage": "test"
+}
