@@ -29,8 +29,22 @@ GameWindow {
             anchors.top: scene.gameWindowAnchorItem.top
         }
 
-        MyButton {
-            anchors.centerIn: scene
+        Column {
+            anchors.centerIn: parent
+            spacing: 10
+            MyButton {
+                labelText: "Add 1"
+                onClicked: {
+                    textScore++
+                }
+            }
+
+            MyButton {
+                labelText: "Add 10"
+                onClicked: {
+                    textScore += 10
+                }
+            }
         }
     }
 }
