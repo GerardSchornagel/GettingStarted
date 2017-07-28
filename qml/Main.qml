@@ -7,6 +7,8 @@ GameWindow {
     screenWidth: 960
     screenHeight: 640
 
+    property int textScore: 0
+
     Scene {
         id: scene
 
@@ -19,12 +21,16 @@ GameWindow {
             color: "#324566"
 
         }
+
         Text{
-            text: "Score"
+            text: "Score " + textScore
             color: "white"
             anchors.horizontalCenter: scene.gameWindowAnchorItem.horizontalCenter
             anchors.top: scene.gameWindowAnchorItem.top
         }
-    }
 
+        MyButton {
+            anchors.centerIn: scene
+        }
+    }
 }
