@@ -56,8 +56,39 @@ GameWindow {
             }
         }
 
+        Image {
+            id:image
+            source: "../assets/vplay-logo.png"
+            width: 100
+            height: 100
+            x: 0
+            y: 0
+        }
+
+        SequentialAnimation{
+            id:numberAnimation
+
+            NumberAnimation {
+                target: image
+                property: "x"
+                from: 0
+                to: 15
+                duration: 150
+            }
+
+            NumberAnimation {
+                target: image
+                property: "x"
+                from: 15
+                to: 0
+                duration: 150
+            }
+
+
+    }
         function increaseScore(amount) {
             textScore += amount
+        numberAnimation.start()
         }
     }
 }
