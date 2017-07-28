@@ -7,12 +7,6 @@ GameWindow {
     screenWidth: 960
     screenHeight: 640
 
-    Rectangle {
-        width: gameWindow.width
-        height: gameWindow.height
-        color: "Red"
-    }
-
     Scene {
         id: scene
 
@@ -21,8 +15,16 @@ GameWindow {
         height: 320
 
         Rectangle {
-            anchors.fill: scene
-            color: "blue"
+            anchors.fill: scene.gameWindowAnchorItem
+            color: "#324566"
+
+        }
+        Text{
+            text: "Score"
+            color: "white"
+            anchors.horizontalCenter: scene.gameWindowAnchorItem.horizontalCenter
+            anchors.top: scene.gameWindowAnchorItem.top
         }
     }
+
 }
