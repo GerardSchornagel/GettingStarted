@@ -33,20 +33,31 @@ GameWindow {
             anchors.centerIn: parent
             spacing: 10
             MyButton {
+                labelText: "Add 1"
                 onClicked: {
-                    increaseScore(1)
+                    scene.increaseScore(1)
                 }
             }
 
             MyButton {
                 labelText: "Add 10"
                 onClicked: {
-                    increaseScore(10)
+                    scene.increaseScore(10)
                 }
             }
         }
-    }
-    function increaseScore(amount) {
-        textScore += amount
+
+        Timer {
+            interval: 1000
+            repeat: true
+            running: true
+            onTriggered: {
+                scene.increaseScore(1)
+            }
+        }
+
+        function increaseScore(amount) {
+            textScore += amount
+        }
     }
 }
