@@ -33,18 +33,20 @@ GameWindow {
             anchors.centerIn: parent
             spacing: 10
             MyButton {
-                labelText: "Add 1"
                 onClicked: {
-                    textScore++
+                    increaseScore(1)
                 }
             }
 
             MyButton {
                 labelText: "Add 10"
                 onClicked: {
-                    textScore += 10
+                    increaseScore(10)
                 }
             }
         }
+    }
+    function increaseScore(amount) {
+        textScore += amount
     }
 }
